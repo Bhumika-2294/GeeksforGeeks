@@ -1,0 +1,16 @@
+
+	int isPalindrome(string S)
+	{
+	    // Your code goes here
+	    //string is palindromic or not
+	    int i=0,n=S.size()-1,j=n;
+	    while(i<=j){
+	        if(S[i]==S[j]){
+	            i++;
+	            j--;
+	        }
+	        else 
+	        return 0;
+	    }
+	    return 1;
+	}
