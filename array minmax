@@ -1,0 +1,20 @@
+
+pair<long long, long long> getMinMax(long long a[], int n) {
+    long long mi = INT_MAX;
+    long long ma = INT_MIN;
+    
+    for(int i = 0; i<n; i++){
+        if(a[i]>ma){
+            ma = a[i];
+        }
+        if(a[i]<mi){
+            mi = a[i];
+        }
+    }
+    pair<long long, long long> otpt;
+    otpt.first = mi;
+    otpt.second = ma;
+    
+    return otpt;
+    
+}
