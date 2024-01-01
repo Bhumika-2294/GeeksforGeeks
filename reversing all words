@@ -1,0 +1,26 @@
+string reverseWords(string s) 
+    { 
+        s=s+'.';
+        stack<string> st;
+        string ans = "";
+        string str = "";
+
+        for (int i = 0; s[i] != '\0'; i++) {
+            str = str + s[i];
+            if (s[i] == '.') {
+                st.push(str);
+                str = "";
+            }
+        }
+
+        // Handle the last word after the loop
+        st.push(str);
+
+        while (st.size()!=0) {
+            ans = ans + st.top();
+            st.pop();
+        }
+        ans.pop_back();
+
+        return ans;
+    }
